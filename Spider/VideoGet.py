@@ -152,7 +152,7 @@ def get_subject(url):
     os.remove('subjectV.txt')
 
 def main():
-    os.chdir('F:\\MM\\video')
+    os.chdir('F:\\video')
     url_index = 'http://www.44wn.com/s04/index.html'
     get_subject(url_index)
 
