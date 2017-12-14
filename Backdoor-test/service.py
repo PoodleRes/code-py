@@ -34,7 +34,7 @@ class Server:
 
 
 def main():
-    ss = Server('45.77.218.223',12314)
+    ss = Server('127.0.0.1',12314)
     ss.bind()
     ss.start()
 
