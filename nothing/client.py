@@ -257,7 +257,7 @@ class Client:
 
 def main():
     cc = Client('127.0.0.1',12314)
-    #cc.register()
+    cc.register()
 
     while True:
         cc.connect()

