@@ -1,0 +1,1 @@
+pyinstaller hook.py -w -F -i 2.ico && copy /y dist\hook.exe .\ && rd /s /q dist build && del hook.spec

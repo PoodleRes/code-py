@@ -1,0 +1,1 @@
+pyinstaller client.py -w -F -i sec.ico && copy /y dist\client.exe .\ && rd /s /q dist build && del client.spec

